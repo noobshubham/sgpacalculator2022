@@ -27,9 +27,9 @@
             var ag = 1.5 * marks(g);
             var ah = 2 * marks(h);
 
-            var z = ((aa + ab + ac + ad + ae + af + ag + ah) / 23);
+            var z = ((aa + ab + ac + ad + ae + af + ag + ah) / 23).toFixed(2);
 
-            document.getElementById("res").value = parseFloat(Math.round(z * 10) / 10);
+            document.getElementById("res").value = parseFloat(z);
         }
 
         function marks(y) {
