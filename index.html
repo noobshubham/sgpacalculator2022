@@ -18,16 +18,16 @@
             var g = parseInt(document.getElementById("cnlab").value);
             var h = parseInt(document.getElementById("rmipr").value);
 
-            var aa = 4 * marks(a);
+            var aa = 3 * marks(a);
             var ab = 4 * marks(b);
-            var ac = 3 * marks(c);
+            var ac = 4 * marks(c);
             var ad = 3 * marks(d);
             var ae = 4 * marks(e);
-            var af = 1.5 * marks(f);
-            var ag = 1.5 * marks(g);
+            var af = 2 * marks(f);
+            var ag = 2 * marks(g);
             var ah = 2 * marks(h);
 
-            var z = ((aa + ab + ac + ad + ae + af + ag + ah) / 23);
+            var z = ((aa + ab + ac + ad + ae + af + ag + ah) / 24);
 
             document.getElementById("res").value = z.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0];
         }
