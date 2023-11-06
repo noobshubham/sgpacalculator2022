@@ -2,105 +2,24 @@
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1"
-        content="width=device-height, initial-scale=1" />
-
-    <title>2023 SGPA 1st Sem</title>
-    <script>
-
-        function calculate() {
-            var a = parseInt(document.getElementById("math").value);
-            var b = parseInt(document.getElementById("os").value);
-            var c = parseInt(document.getElementById("ds").value);
-            var d = parseInt(document.getElementById("cn").value);
-            var e = parseInt(document.getElementById("daa").value);
-            var f = parseInt(document.getElementById("dslab").value);
-            var g = parseInt(document.getElementById("cnlab").value);
-            var h = parseInt(document.getElementById("rmipr").value);
-
-            var aa = 3 * marks(a);
-            var ab = 4 * marks(b);
-            var ac = 4 * marks(c);
-            var ad = 3 * marks(d);
-            var ae = 4 * marks(e);
-            var af = 2 * marks(f);
-            var ag = 2 * marks(g);
-            var ah = 2 * marks(h);
-
-            var z = ((aa + ab + ac + ad + ae + af + ag + ah) / 24);
-
-            document.getElementById("res").value = z.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0];
-        }
-
-        function marks(y) {
-            if (y >= 90)
-                return 10;
-            else if (y <= 89 && y >= 80)
-                return 9;
-            else if (y <= 79 && y >= 70)
-                return 8;
-            else if (y <= 69 && y >= 60)
-                return 7;
-            else if (y <= 59 && y >= 55)
-                return 6;
-            else if (y <= 54 && y >= 50)
-                return 5;
-            else
-                return 0;
-
-        }
-
-    </script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SGPA Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<center>
 
-    <body id="bd">
-        <b id="h">MCA 2023 SGPA CALCULATOR</b>
+<body id="bd">
+    <center>
+        <b id="h">Calculate Your SGPA</b>
         <br>
-        <br>
-
-        <label>22MCA11 / MATH</label>
-        <br>
-        <input type="number" id="math">
-        </br>
-        <label>22MCA12 / OS</label>
-        </br>
-        <input type="number" id="os">
-        </br>
-        <label>22MCA13 / DS</label>
-        </br>
-        <input type="number" id="ds">
-        </br>
-        <label>22MCA14 / CN</label>
-        <br>
-        <input type="number" id="cn">
-
-        </br>
-        <label>22MCA15 / DAA</label>
-        <br>
-        <input type="number" id="daa">
-
-        </br>
-        <label>22MCAL16 / DS Lab</label>
-        <br>
-        <input type="number" id="dslab">
-        </br>
-        <label>22MCAL17 / CN Lab</label>
-        <br>
-        <input type="number" id="cnlab">
-
-        </br>
-        <label>22RMI18 / RMIPR</label>
-        <br>
-        <input type="number" id="rmipr">
         <br>
 
-        <input type="button" value="calculate" id="calc" onclick="calculate()"></input>
+        <a href="semester-one.html">
+            <button id="calc">Sem 1</button>
+        </a>
 
-        <p style="color:red; font-size:large">Your SGPA is</p>
-        <input type="number" id="res" disabled>
+        <a href="semester-two.html">
+            <button id="calc">Sem 2</button>
+        </a>
 
         <footer>
             <p class="footer-heart">
@@ -111,7 +30,16 @@
                     href="https://github.com/noobshubham" target="_blank">SHUBHAM</a>
             </p>
         </footer>
+    </center>
 
-</center>
+    <script>
+        // Add a click listener to the "Sem 2" button
+        document.getElementById("sem2Button").addEventListener("click", function () {
+            // Perform an action when the button is clicked
+            alert("Sem 2 button clicked!");
+            // You can add code to navigate to the "semester2.html" page or perform other actions here.
+        });
+    </script>
 </body>
+
 </html>

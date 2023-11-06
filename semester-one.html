@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"
+        content="width=device-height, initial-scale=1" />
+
+    <title>2023 SGPA 1st Sem</title>
+    <script>
+
+        function calculate() {
+            var a = parseInt(document.getElementById("math").value);
+            var b = parseInt(document.getElementById("os").value);
+            var c = parseInt(document.getElementById("ds").value);
+            var d = parseInt(document.getElementById("cn").value);
+            var e = parseInt(document.getElementById("daa").value);
+            var f = parseInt(document.getElementById("dslab").value);
+            var g = parseInt(document.getElementById("cnlab").value);
+            var h = parseInt(document.getElementById("rmipr").value);
+
+            var aa = 3 * marks(a);
+            var ab = 4 * marks(b);
+            var ac = 4 * marks(c);
+            var ad = 3 * marks(d);
+            var ae = 4 * marks(e);
+            var af = 2 * marks(f);
+            var ag = 2 * marks(g);
+            var ah = 2 * marks(h);
+
+            var z = ((aa + ab + ac + ad + ae + af + ag + ah) / 24);
+
+            document.getElementById("res").value = z.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0];
+        }
+
+        function marks(y) {
+            if (y >= 90)
+                return 10;
+            else if (y <= 89 && y >= 80)
+                return 9;
+            else if (y <= 79 && y >= 70)
+                return 8;
+            else if (y <= 69 && y >= 60)
+                return 7;
+            else if (y <= 59 && y >= 55)
+                return 6;
+            else if (y <= 54 && y >= 50)
+                return 5;
+            else
+                return 0;
+
+        }
+
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<center>
+
+    <body id="bd">
+        <b id="h">MCA 2023 SGPA CALCULATOR</b>
+        <br>
+        <br>
+
+        <label>22MCA11 / MATH</label>
+        <br>
+        <input type="number" id="math">
+        </br>
+        <label>22MCA12 / OS</label>
+        </br>
+        <input type="number" id="os">
+        </br>
+        <label>22MCA13 / DS</label>
+        </br>
+        <input type="number" id="ds">
+        </br>
+        <label>22MCA14 / CN</label>
+        <br>
+        <input type="number" id="cn">
+
+        </br>
+        <label>22MCA15 / DAA</label>
+        <br>
+        <input type="number" id="daa">
+
+        </br>
+        <label>22MCAL16 / DS Lab</label>
+        <br>
+        <input type="number" id="dslab">
+        </br>
+        <label>22MCAL17 / CN Lab</label>
+        <br>
+        <input type="number" id="cnlab">
+
+        </br>
+        <label>22RMI18 / RMIPR</label>
+        <br>
+        <input type="number" id="rmipr">
+        <br>
+
+        <input type="button" value="calculate" id="calc" onclick="calculate()"></input>
+
+        <p style="color:red; font-size:large">Your SGPA is</p>
+        <input type="number" id="res" disabled>
+
+        <footer>
+            <p class="footer-heart">
+                Made with <g-emoji class="g-emoji" alias="heart"
+                    fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2764.png">
+                    <img class="emoji" alt="heart" height="20" width="20"
+                        src="https://github.githubassets.com/images/icons/emoji/unicode/2764.png"></g-emoji> by <a
+                    href="https://github.com/noobshubham" target="_blank">SHUBHAM</a>
+            </p>
+        </footer>
+
+</center>
+</body>
+</html>
