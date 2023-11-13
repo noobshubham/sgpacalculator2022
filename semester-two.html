@@ -13,23 +13,23 @@
             var b = parseInt(document.getElementById("java").value);
             var c = parseInt(document.getElementById("se").value);
             var d = parseInt(document.getElementById("web").value);
-            var e = parseInt(document.getElementById("data-mining").value);
-            // var f = parseInt(document.getElementById("uid").value);
-            var g = parseInt(document.getElementById("ma").value);
-            var h = parseInt(document.getElementById("dbmslab").value);
-            var i = parseInt(document.getElementById("javalab").value);
+            var e = parseInt(document.getElementById("dm-uid").value);
+            var f = parseInt(document.getElementById("ma").value);
+            var g = parseInt(document.getElementById("dbmslab").value);
+            var h = parseInt(document.getElementById("javalab").value);
+            var i = parseInt(document.getElementById("seminar").value);
 
             var aa = 3 * marks(a);
             var ab = 3 * marks(b);
             var ac = 4 * marks(c);
             var ad = 4 * marks(d);
             var ae = 3 * marks(e);
-            // var af = 3 * marks(f);
-            var ag = 3 * marks(g);
+            var af = 3 * marks(f);
+            var ag = 2 * marks(g);
             var ah = 2 * marks(h);
             var ai = 2 * marks(i);
 
-            var z = ((aa + ab + ac + ad + ae + af + ag + ah + ai) / 27);
+            var z = ((aa + ab + ac + ad + ae + af + ag + ah + ai) / 26);
 
             document.getElementById("res").value = z.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0];
         }
@@ -71,23 +71,21 @@
         </br>
         <input type="number" id="java">
         </br>
+        <label>22MCA263 / MA</label>
+        <br>
+        <input type="number" id="ma">
+        </br>
         <label>22MCA23 / SE</label>
         </br>
         <input type="number" id="se">
         </br>
+        <label>22MCA252 / DM or 22MCA254 / UID</label>
+        <br>
+        <input type="number" id="dm-uid">
+        </br>
         <label>22MCA24 / WEB-T</label>
         <br>
         <input type="number" id="web">
-
-        </br>
-        <label>22MCA252 / DM or 22MCA254 / UID</label>
-        <br>
-        <input type="number" id="data-mining">
-        </br>
-        <label>22MCA263 / MA</label>
-        <br>
-        <input type="number" id="ma">
-
         </br>
         <label>22MCAL27 / DBMS Lab</label>
         <br>
@@ -97,6 +95,10 @@
         <br>
         <input type="number" id="javalab">
         <br>
+        <label>Seminar</label>
+        <br>
+        <input type="number" id="seminar">
+    </br>
 
         <input type="button" value="Calculate" id="calc" onclick="calculate()"></input>
 
