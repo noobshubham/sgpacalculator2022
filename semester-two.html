@@ -14,7 +14,7 @@
             var c = parseInt(document.getElementById("se").value);
             var d = parseInt(document.getElementById("web").value);
             var e = parseInt(document.getElementById("data-mining").value);
-            var f = parseInt(document.getElementById("uid").value);
+            // var f = parseInt(document.getElementById("uid").value);
             var g = parseInt(document.getElementById("ma").value);
             var h = parseInt(document.getElementById("dbmslab").value);
             var i = parseInt(document.getElementById("javalab").value);
@@ -24,7 +24,7 @@
             var ac = 4 * marks(c);
             var ad = 4 * marks(d);
             var ae = 3 * marks(e);
-            var af = 3 * marks(f);
+            // var af = 3 * marks(f);
             var ag = 3 * marks(g);
             var ah = 2 * marks(h);
             var ai = 2 * marks(i);
@@ -80,14 +80,9 @@
         <input type="number" id="web">
 
         </br>
-        <label>22MCA252 / DM</label>
+        <label>22MCA252 / DM or 22MCA254 / UID</label>
         <br>
         <input type="number" id="data-mining">
-
-        </br>
-        <label>22MCA254 / UID</label>
-        <br>
-        <input type="number" id="uid">
         </br>
         <label>22MCA263 / MA</label>
         <br>
@@ -103,7 +98,7 @@
         <input type="number" id="javalab">
         <br>
 
-        <input type="button" value="calculate" id="calc" onclick="calculate()"></input>
+        <input type="button" value="Calculate" id="calc" onclick="calculate()"></input>
 
         <p style="color:red; font-size:large">Your SGPA is</p>
         <input type="number" id="res" disabled>
